@@ -1,5 +1,5 @@
 /**
-   Copyright 2015 Torsten Oltmanns, ai-republic GmbH, Germany
+   
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -25,12 +25,12 @@ import java.net.InetAddress;
  */
 public interface IMulticastMessageHandler {
 
-	/**
-	 * Handle received messages from the {@link MulticastReceiver}.
-	 *
-	 * @param fromHost the host where the multicast message came from
-	 * @param fromPort the port where the multicast message came from
-	 * @param data the actual data
-	 */
-	void handle(InetAddress fromHost, int fromPort, byte[] data);
+    /**
+     * Handle received messages from the {@link MulticastReceiver}.
+     *
+     * @param fromHost the host where the multicast message came from
+     * @param fromPort the port where the multicast message came from
+     * @param data the actual data
+     */
+    void handle(InetAddress fromHost, int fromPort, byte[] data);
 }

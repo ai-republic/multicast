@@ -1,5 +1,5 @@
 /**
-   Copyright 2015 Torsten Oltmanns, ai-republic GmbH, Germany
+   
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -28,20 +28,20 @@ import java.net.MulticastSocket;
  */
 public class MulticastSender {
 
-	/**
-	 * Sends messages via multicast.
-	 *
-	 * @param group the {@link InetAddress} to send to
-	 * @param port the port
-	 * @param data the data
-	 * @throws IOException
-	 */
-	public static void send(final InetAddress group, final int port, final byte[] data) throws IOException {
-		// Create the socket but we don't bind it as we are only going to send data
-		final MulticastSocket s = new MulticastSocket();
-		// Create a DatagramPacket
-		final DatagramPacket pack = new DatagramPacket(data, data.length, group, port);
-		s.send(pack);
-		s.close();
-	}
+    /**
+     * Sends messages via multicast.
+     *
+     * @param group the {@link InetAddress} to send to
+     * @param port the port
+     * @param data the data
+     * @throws IOException
+     */
+    public static void send(final InetAddress group, final int port, final byte[] data) throws IOException {
+        // Create the socket but we don't bind it as we are only going to send data
+        final MulticastSocket s = new MulticastSocket();
+        // Create a DatagramPacket
+        final DatagramPacket pack = new DatagramPacket(data, data.length, group, port);
+        s.send(pack);
+        s.close();
+    }
 }
